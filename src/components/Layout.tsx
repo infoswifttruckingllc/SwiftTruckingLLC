@@ -32,7 +32,8 @@ export const Layout = () => {
 
             <Header />
 
-            <main id="main-content">
+            {/* Offset fixed header height so content isn't hidden behind it */}
+            <main id="main-content" className="pt-16 md:pt-0">
                 <Outlet />
             </main>
 
