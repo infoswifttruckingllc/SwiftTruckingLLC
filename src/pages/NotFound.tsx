@@ -19,25 +19,25 @@ const NotFound = () => {
             Page Not Found
           </h2>
           <p className="text-muted-foreground">
-            Sorry, we couldn't find the page you're looking for. 
+            Sorry, we couldn't find the page you're looking for.
             The page may have been moved or doesn't exist.
           </p>
         </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <div className="flex flex-col sm:flex-row gap-4 space-y-4 sm:space-y-0 justify-center">
           <Button asChild className="bg-primary hover:bg-primary-dark">
             <a href="/">
               <Home className="h-4 w-4 mr-2" />
               Go Home
             </a>
           </Button>
-          
+
           <Button variant="outline" onClick={() => window.history.back()}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Go Back
           </Button>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground">
             Need help? <a href="#contact" className="text-primary hover:text-primary-dark font-medium">Contact our dispatch team</a>

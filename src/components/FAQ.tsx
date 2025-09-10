@@ -17,7 +17,7 @@ export const FAQ = () => {
   };
 
   return (
-    < section className="section-padding bg-white" >
+    < section id="faq" className="section-padding bg-white" >
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">

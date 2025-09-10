@@ -48,14 +48,14 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="section-padding bg-white">
+    <section id="testimonials" className="section-padding bg-white">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
             What Our Drivers Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real stories from real drivers who've grown their businesses with Swift Trucking's 
+            Real stories from real drivers who've grown their businesses with Swift Trucking's
             professional dispatch services.
           </p>
         </div>
@@ -64,22 +64,22 @@ export const Testimonials = () => {
         <div className="lg:hidden">
           <div className="relative overflow-hidden">
             <div className="flex transition-transform duration-300 ease-in-out"
-                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="service-card text-center max-w-lg mx-auto">
                     <Quote className="h-8 w-8 text-primary/30 mx-auto mb-4" />
-                    
+
                     <div className="flex justify-center mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    
+
                     <p className="text-muted-foreground mb-6 italic leading-relaxed">
                       "{testimonial.text}"
                     </p>
-                    
+
                     <div className="border-t border-border pt-4">
                       <h4 className="font-semibold text-card-foreground">{testimonial.name}</h4>
                       <p className="text-sm text-muted-foreground">{testimonial.role}, {testimonial.location}</p>
@@ -95,28 +95,27 @@ export const Testimonials = () => {
 
           {/* Navigation */}
           <div className="flex justify-center items-center mt-8 space-x-4">
-            <button 
+            <button
               onClick={prevTestimonial}
               className="p-2 rounded-full bg-brand-gainsboro hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
-            
+
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-primary' : 'bg-brand-gainsboro'
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-primary' : 'bg-brand-gainsboro'
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
-            
-            <button 
+
+            <button
               onClick={nextTestimonial}
               className="p-2 rounded-full bg-brand-gainsboro hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Next testimonial"
@@ -132,18 +131,18 @@ export const Testimonials = () => {
             <div key={index} className="service-card">
               <div className="flex items-start space-x-4">
                 <Quote className="h-8 w-8 text-primary/30 flex-shrink-0 mt-1" />
-                
+
                 <div className="flex-1">
                   <div className="flex mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  
+
                   <p className="text-muted-foreground mb-4 italic leading-relaxed">
                     "{testimonial.text}"
                   </p>
-                  
+
                   <div className="flex items-center justify-between border-t border-border pt-4">
                     <div>
                       <h4 className="font-semibold text-card-foreground">{testimonial.name}</h4>

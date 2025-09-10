@@ -136,4 +136,9 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+
+  /* Account for fixed header when using in-page anchors */
+  #services, #why-choose-us, #process, #testimonials, #faq, #contact {
+    scroll-margin-top: 5rem; /* header height ~64px */
+  }
 }
