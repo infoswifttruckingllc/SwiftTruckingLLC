@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swift Trucking Design System - Professional logistics brand
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --brand-primary: 208 100% 28%;        /* #004990 Midnight Blue */
+    --brand-primary-light: 208 100% 35%;  /* Lighter variant */
+    --brand-primary-dark: 208 100% 22%;   /* Darker variant */
+    --brand-silver: 240 3% 67%;           /* #A8A9AD Metallic Silver */
+    --brand-gainsboro: 0 0% 86%;          /* #DCDCDC Gainsboro */
+    
+    /* Core System Colors */
+    --background: 0 0% 100%;
+    --foreground: 208 100% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 208 50% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 208 50% 20%;
+
+    --primary: 208 100% 28%;               /* Brand primary */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 86%;                 /* Brand gainsboro */
+    --secondary-foreground: 208 100% 28%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 3% 50%;
+
+    --accent: 208 100% 35%;                /* Brand primary light */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3% 80%;
+    --input: 240 3% 90%;
+    --ring: 208 100% 28%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(208 100% 28%) 0%, hsl(208 100% 35%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(208 100% 28% / 0.1), 0 2px 4px -2px hsl(208 100% 28% / 0.1);
+    --shadow-hero: 0 20px 25px -5px hsl(208 100% 28% / 0.15);
+    
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    /* Brand Colors remain consistent */
+    --brand-primary: 208 100% 35%;        /* Slightly lighter for dark mode */
+    --brand-primary-light: 208 100% 42%;
+    --brand-primary-dark: 208 100% 28%;
+    --brand-silver: 240 3% 67%;
+    --brand-gainsboro: 0 0% 20%;          /* Darker for dark surfaces */
+    
+    --background: 208 50% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 208 50% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 208 50% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 208 100% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 208 30% 15%;
+    --muted-foreground: 240 3% 65%;
+
+    --accent: 208 100% 42%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 208 30% 18%;
+    --input: 208 30% 18%;
+    --ring: 208 100% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: 'cv11' 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-hero-secondary {
+    @apply bg-white/20 text-white border-2 border-white/30 hover:bg-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 backdrop-blur-sm;
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Card Styles */
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
