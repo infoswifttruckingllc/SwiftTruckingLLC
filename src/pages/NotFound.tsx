@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Home, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,6 +13,16 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
+      <SEO
+        title="404 - Page Not Found"
+        description="The page you were looking for does not exist."
+        canonical={typeof window !== 'undefined' ? window.location.href : undefined}
+        jsonLd={{ "@context": "https://schema.org", "@type": "WebPage", "name": "404 Not Found" }}
+      />
+      {/* Ensure 404 isn't indexed */}
+      <noscript>
+        <meta name="robots" content="noindex, nofollow" />
+      </noscript>
       <div className="text-center max-w-md mx-auto px-4">
         <div className="mb-8">
           <h1 className="text-8xl font-bold text-primary mb-4">404</h1>

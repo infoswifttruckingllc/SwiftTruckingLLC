@@ -1,4 +1,19 @@
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/careers"
+  to = "/index.html"
+  status = 200
+
+# Serve favicon.ico from the versioned SVG to ensure cache-busting and consistency
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.svg?v=2"
+  status = 200
+  force = true
+
+[context.production.environment]
+  SITE_URL = "https://swifttruckingllc.com"
