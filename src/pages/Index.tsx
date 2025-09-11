@@ -1,13 +1,11 @@
-import { Hero } from '@/components/Hero';
 import { SEO } from '@/components/SEO';
-import { Services } from '@/components/Services';
-import { WhyChooseUs } from '@/components/WhyChooseUs';
-// import { Industries } from '@/components/Industries';
-import Process from '@/components/Process';
-import { Testimonials } from '@/components/Testimonials';
-import { Pricing } from '@/components/Pricing';
 import { FAQ } from '@/components/FAQ';
+import { Hero } from '@/components/Hero';
+import Process from '@/components/Process';
+import { Services } from '@/components/Services';
 import { ContactForm } from '@/components/ContactForm';
+import { WhyChooseUs } from '@/components/WhyChooseUs';
+import { Testimonials } from '@/components/Testimonials';
 
 const Index = () => {
   return (
@@ -19,7 +17,7 @@ const Index = () => {
         keywords={[
           'truck dispatch', 'freight dispatch', 'load booking', 'owner operator', 'flatbed', 'reefer', 'dry van', 'box truck', 'logistics'
         ]}
-        ogImage="https://swifttruckingllc.com/og-image.jpg"
+        ogImage="https://swifttruckingllc.com/swiftTruckingLLC.webp"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'LocalBusiness',

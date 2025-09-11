@@ -8,12 +8,7 @@
   to = "/index.html"
   status = 200
 
-# Serve favicon.ico from the versioned SVG to ensure cache-busting and consistency
-[[redirects]]
-  from = "/favicon.ico"
-  to = "/favicon.svg?v=2"
-  status = 200
-  force = true
+# Let /favicon.ico be served directly (place a real ICO in public/)
 
 [context.production.environment]
   SITE_URL = "https://swifttruckingllc.com"
