@@ -10,5 +10,12 @@
 
 # Let /favicon.ico be served directly (place a real ICO in public/)
 
+# Fallback: send all other paths to SPA with 404 status so layout renders but
+# crawlers still see a proper 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
 [context.production.environment]
   SITE_URL = "https://swifttruckingllc.com"
